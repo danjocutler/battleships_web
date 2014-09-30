@@ -8,6 +8,7 @@ gem "sinatra"
 	gem 'cucumber'
 	gem 'cucumber-sinatra'
 	gem 'launchy'
+	gem 'rack-flash'
 	gem 'rspec'
 	gem 'shotgun'
 end

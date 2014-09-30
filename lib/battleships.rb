@@ -1,12 +1,12 @@
 require 'sinatra/base'
-
+require_relative 'game_setup'
 
 class Battleships < Sinatra::Base
 
 	set :views, Proc.new { File.join(root, "../" "views") }
 	# enable :sessions
 
-	# GAME = Game.new
+	GAME = Game.new
 
   get '/' do
   	# puts GAME.inspect
@@ -22,6 +22,10 @@ class Battleships < Sinatra::Base
 
   get '/board' do
   	erb :board
+  end
+
+  get '/player1_ships' do
+    erb :player1_ships
   end
 
   # start the server if ruby file executed directly
