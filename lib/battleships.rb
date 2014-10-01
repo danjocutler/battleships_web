@@ -4,11 +4,13 @@ require_relative 'game_setup'
 class Battleships < Sinatra::Base
 
 	set :views, Proc.new { File.join(root, "../" "views") }
-	# enable :sessions
+	enable :sessions
 
 	GAME = Game.new
 
+
   get '/' do
+    # raise session.inspect
   	# puts GAME.inspect
   	# @player1 = GAME.player1.name unless GAME.player
   	# raise session.inspect
@@ -20,7 +22,13 @@ class Battleships < Sinatra::Base
   	erb :new_game
   end
 
-  get '/board' do
+  post '/board' do
+    player_name = params[:player_1]
+    player = Player.new
+    player.name = player_name
+    session[:me] = player
+    GAME.add_player player
+    puts GAME.inspect
   	erb :board
   end
 

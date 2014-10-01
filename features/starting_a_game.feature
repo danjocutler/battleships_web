@@ -6,19 +6,15 @@ Feature: Starting the game
 Scenario: Registering
     Given I am on the homepage
     When I follow "New Game"
-    Then I should see "Player 1 what's your name?"
+    Then I should see "What's your name?"
 
-Scenario: Registering
-    Given I am on the homepage
-    When I follow "New Game"
-    Then I should see "Player 2 what's your name?"
-
-Scenario: Creating player2
+Scenario: Creating player
 	Given I am on the name registry page
-	When I submit my name
+	When I click Register
+  And another player has registered
 	Then I should see "click to start game"
 
-Scenario: Create board
+Scenario: 
 	Given I am on the board page
 	When I click start game
 	Then I should see "Player 1, place your ships"

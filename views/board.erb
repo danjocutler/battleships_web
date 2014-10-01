@@ -1,3 +1,11 @@
-<a href="/player1_ships">click to start game</a>
+<% if GAME.player1 && GAME.player2 %>
+
+	<a href="/player1_ships">click to start game</a>
+
+<% else %>
+
+	Please wait for another player to register. Click <a href="/board">here</a> to refresh page.
+
+<% end %>
 
 

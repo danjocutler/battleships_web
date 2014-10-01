@@ -14,9 +14,10 @@ Given(/^I am on the name registry page$/) do
   visit ("/new_game")
 end
 
-When(/^I submit my name$/) do
-  click_button "Enter name" #after entering name
+When(/^I click Register$/) do
+  click_on "Register"
 end
+
 
 Given(/^I am on the board page$/) do
   visit ("/board")
@@ -24,6 +25,10 @@ end
 
 When(/^I click start game$/) do
   click_on "click to start game"
+end
+
+When(/^another player has registered$/) do
+  #Player.count = 2
 end
 
 
