@@ -32,6 +32,10 @@ class Battleships < Sinatra::Base
   	erb :board
   end
 
+   get '/board' do
+    erb :board
+  end
+
   get '/player1_ships' do
     erb :player1_ships
   end
