@@ -1,5 +1,7 @@
 #BattleShips
 
+[![Code Climate](https://codeclimate.com/github/danjocutler/battleships_web/badges/gpa.svg)](https://codeclimate.com/github/danjocutler/battleships_web)
+
 The game is ready to play when theres are two players initialized with a board each and each board has 5 ships placed. 
 
 By default it is player1's go first and after each shot it will switch the turns until there is a winner. 
